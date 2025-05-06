@@ -47,13 +47,15 @@ Technologies used in the project:
 -Quibble can read these old Excel files and automatically import the necessary data into the database, streamlining and digitizing the process.<br>
 
 ### Automatic computations and color Coding
-#Quibble automates key calculations, including:
+
+### Quibble automates key calculations, including:
 -Top 5 scorers<br>
 -Total marks obtained and attempted per CO for each student<br>
 -Total marks scored by each student<br>
 -Attainment value for each CO per student<br>
 -Overall attainment for each CO<br>
-#It also automatically color-codes:<br>
+
+### It also automatically color-codes:<br>
 -Attainment of each CO for every student<br>
 -Total attainment of each CO<br>
 
