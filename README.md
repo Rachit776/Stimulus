@@ -1,4 +1,4 @@
-<h1 align="center" id="title">STIMULUS</h1>
+<h1 align="center" id="title">Stimulus</h1>
 
 <p align="center"><img src="https://socialify.git.ci/Rachit776/Stimulus/image?font=Rokkitt&amp;language=1&amp;name=1&amp;owner=1&amp;pattern=Solid&amp;theme=Dark" alt="project-image"></p>
 
@@ -28,29 +28,36 @@ Technologies used in the project:
 ## Key features
 
 ### Web based Software
-- Being a web based software means we get to enjoy the ease of development usually associated with web projects.<br>
-- Not running it in a browser as a website allows us to control flow of the software and prevent certain user actions (jumping to pages, back, forward, etc).<br>
-- We also get access to some lower level system functions not easily available through browser (like directly saving pdf to desktop).<br>
+-As a web-based software, it benefits from the ease and flexibility typical of web development.<br>
+-Running it outside a standard browser (not as a regular website) gives better control over user flow, preventing actions like page jumping or using back/forward buttons.<br>
+-It also enables access to lower-level system functions, such as directly saving PDFs to the desktop — features not easily achievable in a browser environment.<br>
 
 ### Restricted access
-- The login, registration and related functions are all handled through the firebase auth database.<br>
-- This keeps us from having to re-invent the wheel and provides us with all new and advanced security features from google.<br>
-- Only users with confirmed-email @sfitengg.org can use the software.<br>
-- Even if someone somehow gets access with another email id, the database read and write rules would prevent them from getting or modifying any data.<br>
+-Login, registration, and related functions are managed using Firebase Auth, avoiding the need to build a custom authentication system.<br>
+-This setup leverages Google’s advanced, up-to-date security features.<br>
+-Only users with verified @sfitengg.org email addresses can access the software.<br>
+-Even if someone gains access with an unauthorized email, Firebase’s database read/write rules prevent them from viewing or altering any data.<br>
 
 ### Read student list from excel
-- The college has data of all students of a class for a particular year stored in an excel file.<br>
-- This file can directly be parsed by Quibble to get the required student info and store it in the database so that teachers won’t have to repeatedly add it.<br>
+-The college maintains Excel files containing student data (by class and year).<br>
+-Quibble can directly parse these files to extract student information and store it in the database, eliminating the need for teachers to repeatedly enter the same details.<br>
 
 ### Read previous marks from excel
-- Before Quibble, the college manually did all the work and stored all data in an excel file.<br>
-- Quibble can read these old excel files and automatically store all required data in the database.<br>
+-Before Quibble, all work was done manually, with data stored in Excel files.<br>
+-Quibble can read these old Excel files and automatically import the necessary data into the database, streamlining and digitizing the process.<br>
 
 ### Automatic computations and color Coding
-- Following important calculations are automated by Quibble: + Top 5 scorers + Total marks obtained and attempted per CO for each student + Total marks scored by each student + Attainment value for each CO for every student + Total attainment for each CO Quibble also automatically color-codes: + Attainment of each CO for every student + Total attainment of each CO.<br>
+#Quibble automates key calculations, including:
+-Top 5 scorers<br>
+-Total marks obtained and attempted per CO for each student<br>
+-Total marks scored by each student<br>
+-Attainment value for each CO per student<br>
+-Overall attainment for each CO<br>
+#It also automatically color-codes:<br>
+-Attainment of each CO for every student<br>
+-Total attainment of each CO<br>
 
 ### All data in database
-- All required data is collected and stored using Firebase Realtime database.<br>
-- FRD stores all data in JSON format.<br>
-- Storing data allows us to provide open-and-resume functionality as well as to prevent unnecessary repetitions.<br>
-- The stored data will further be used for advanced data analytics and visualization.<br>
+-All necessary data is stored using Firebase Realtime Database (FRD), which saves data in JSON format.<br>
+-This storage enables features like open-and-resume and avoids redundant data entry.<br>
+-Additionally, the stored data can be leveraged for advanced analytics and visualizations in the future.<br>
