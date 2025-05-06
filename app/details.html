@@ -1,0 +1,236 @@
+<html>
+<head>
+  <title>Stimulus: Enter Details</title>
+  <!-- Material Design -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-red.min.css">
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+  <!--getmdl-select-->
+  <script defer src="../resources/getmdl-select.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="../resources/getmdl-select.min.css" />
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+  (function() {// Initialize Firebase
+    var config = {
+            apiKey: "AIzaSyDWLnXQwRR-kmvSwlWxgt_TX2F_uEDjHlk",
+            authDomain: "minor-1709364961391.firebaseapp.com",
+            databaseURL: "https://minor-1709364961391-default-rtdb.firebaseio.com",
+            storageBucket: "minor-1709364961391.appspot.com",
+        };
+    firebase.initializeApp(config);
+  }());
+  </script>
+
+  <!-- Custom script and styling -->
+  <link type="text/css" rel="stylesheet" href="../resources/login.css" />
+  <script defer src="../resources/details.js"></script>
+
+</head>
+<body>
+  <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+    <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+             <img src="../resources/favicon.ico" style="margin-left:-50px;"><span class="mdl-layout-title" style="margin-left:5px;">Stimulus</span>
+            <span class="mdl-layout-title" style="margin-left:35%;">Enter details required</span>
+            <div class="mdl-layout-spacer"></div>
+
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                <li class="mdl-menu__item"
+                    onclick="firebase.auth().signOut();window.location.href='login.html'">Logout</li>
+            </ul>
+        </div>
+    </header>
+    <div class="demo-ribbon"></div>
+
+  <center>
+
+    <div class="base">
+      <div id="info1">Details</div>
+
+      <div id="form-details" class="form" method="post">
+
+        <form action="co.html">
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" id="cy" min="1000" max="9999" step="1"
+              title="The 4-digit year in which the Sem took place. eg. 2016"value="2025" required>
+            <label class="mdl-textfield__label" for="cy">Calendar Year...</label>
+          </div><br>
+          
+          
+          
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="teacher"  value="Shailesh Srivastava" required>
+            <label class="mdl-textfield__label" for="teacher">Teacher Name...</label>
+          </div><br>
+
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+            <input class="mdl-textfield__input" type="text" id="year" value="1st" readonly required>
+            <label for="year">
+              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            </label>
+            <label for="year" class="mdl-textfield__label">Year</label>
+            <ul for="year" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+              <li class="mdl-menu__item">1st</li>
+              <li class="mdl-menu__item">2nd</li>
+              <li class="mdl-menu__item">3rd</li>
+              <li class="mdl-menu__item">4th</li>
+            </ul>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select" style="margin-left:50px;">
+            <input class="mdl-textfield__input" type="text" id="branch" value="CSE" readonly required>
+            <label for="branch">
+              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            </label>
+            <label for="branch" class="mdl-textfield__label">Branch</label>
+            <ul for="branch" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+              <li class="mdl-menu__item">CSE</li>
+              <li class="mdl-menu__item">ECE</li>
+              <li class="mdl-menu__item">IT</li>
+            </ul>
+          </div><br>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+            <input class="mdl-textfield__input" type="text" id="div" value="F1" readonly required>
+            <label for="div">
+              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            </label>
+            <label for="div" class="mdl-textfield__label">Batch</label>
+            <ul for="div" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+              <li class="mdl-menu__item">F1</li>
+              <li class="mdl-menu__item">F2</li>
+              <li class="mdl-menu__item">F3</li>
+              <li class="mdl-menu__item">F4</li>
+              <li class="mdl-menu__item">F5</li>
+              <li class="mdl-menu__item">F6</li>
+              <li class="mdl-menu__item">F7</li>
+              <li class="mdl-menu__item">F8</li>
+            </ul>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select" style="margin-left:50px;">
+            <input class="mdl-textfield__input" type="text" id="sem" value="1" readonly tabIndex="-1" required>
+            <label for="sem">
+              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            </label>
+            <label for="sem" class="mdl-textfield__label">Semester</label>
+            <ul for="sem" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+              <li class="mdl-menu__item f">1</li>
+              <li class="mdl-menu__item f">2</li>
+              <li class="mdl-menu__item s">3</li>
+              <li class="mdl-menu__item s">4</li>
+              <li class="mdl-menu__item t">5</li>
+              <li class="mdl-menu__item t">6</li>
+              <li class="mdl-menu__item b">7</li>
+              <li class="mdl-menu__item b">8</li>
+            </ul>
+          </div><br>
+
+          <div style="width:310px;">
+		  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+            <input class="mdl-textfield__input" type="text" id="sub" value="Software Project Management" readonly required>
+            <label for="sub">
+              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            </label>
+            <label for="sub" class="mdl-textfield__label">Subject</label>
+            <ul for="sub" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+
+              <li class="mdl-menu__item it3">Applied Mathematics-III</li>
+              <li class="mdl-menu__item it3">Data Structure & Algorithm Analysis</li>
+              <li class="mdl-menu__item it3">Object Oriented Programming Methodology</li>
+              <li class="mdl-menu__item it3">Analog & Digital Circuits</li>
+              <li class="mdl-menu__item it3">Database Management Systems</li>
+              <li class="mdl-menu__item it3">Principles of Analog & Digital Communication</li>
+
+              <li class="mdl-menu__item it4">Applied Mathematics-IV</li>
+              <li class="mdl-menu__item it4">Computer Networks</li>
+              <li class="mdl-menu__item it4">Computer Organization & Architecture</li>
+              <li class="mdl-menu__item it4">Automata Theory</li>
+              <li class="mdl-menu__item it4">Web Programming</li>
+              <li class="mdl-menu__item it4">Information Theory & Coding</li>
+
+              <li class="mdl-menu__item it5">Computer Graphics & Virtual Reality</li>
+              <li class="mdl-menu__item it5">Operating Systems</li>
+              <li class="mdl-menu__item it5">Microcontroller & Embedded Systems</li>
+              <li class="mdl-menu__item it5">Advanced Database Management Systems</li>
+              <li class="mdl-menu__item it5">Open Source Technologies</li>
+              <li class="mdl-menu__item it5">Business Communication & Ethics</li>
+
+              <li class="mdl-menu__item it6">Software Engineering</li>
+              <li class="mdl-menu__item it6">Distributed Systems</li>
+              <li class="mdl-menu__item it6">System & Web Security</li>
+              <li class="mdl-menu__item it6">Data Mining & Business Intelligence</li>
+              <li class="mdl-menu__item it6">Advance Internet Technology</li>
+
+              <li class="mdl-menu__item it7">Software Project Management</li>
+              <li class="mdl-menu__item it7">Cloud Computing</li>
+              <li class="mdl-menu__item it7">Intelligent System</li>
+              <li class="mdl-menu__item it7">Wireless Technology</li>
+              <li class="mdl-menu__item it7" disabled>Electives:-</li>
+              <li class="mdl-menu__item it7">Image Processing</li>
+              <li class="mdl-menu__item it7">Software Architecture</li>
+              <li class="mdl-menu__item it7">E-Commerce & E-Business</li>
+              <li class="mdl-menu__item it7">Multimedia Systems</li>
+              <li class="mdl-menu__item it7">Usability Engineering</li>
+              <li class="mdl-menu__item it7">Ubiquitous Computing</li>
+
+              <li class="mdl-menu__item it8">Storage Network Management & Retrieval</li>
+              <li class="mdl-menu__item it8">Big Data Analytics</li>
+              <li class="mdl-menu__item it8">Computer Simulation & Modeling</li>
+              <li class="mdl-menu__item it8" disabled>Electives:-</li>
+              <li class="mdl-menu__item it8">Enterprise Resource Planning</li>
+              <li class="mdl-menu__item it8">Wireless Sensor Networks</li>
+              <li class="mdl-menu__item it8">Geographical Information Systems</li>
+              <li class="mdl-menu__item it8">Robotics</li>
+              <li class="mdl-menu__item it8">Soft Computing</li>
+              <li class="mdl-menu__item it8">Software Testing & Quality Assurance</li>
+            </ul>
+          </div></div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+            <input class="mdl-textfield__input" type="text" id="iat" value="T1" readonly required>
+            <label for="iat">
+              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+            </label>
+            <label for="iat" class="mdl-textfield__label">Exam</label>
+            <ul for="iat" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+              <li class="mdl-menu__item">T1</li>
+              <li class="mdl-menu__item">T2</li>
+              <li class="mdl-menu__item">T3</li>
+            </ul>
+          </div><br>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" id="attainment" value="60" min="0" max="100" step="1" required>
+            <label class="mdl-textfield__label" for="attainment">Assessment %Marks...</label>
+          </div><br>
+          
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" id="attainstud3" value="60" min="0" max="100" step="1" required>
+            <label class="mdl-textfield__label" for="attainstud3">Upper limit %Students...</label>
+          </div>
+          
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" id="attainstud2" value="40" min="0" max="100" step="1" required>
+            <label class="mdl-textfield__label" for="attainstud2">Lower Limit %Students...</label>
+          </div>          
+          <br>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+            <b>SUBMIT</b>
+          </button> <img id="throbber" src="../resources/throbber.gif" style="display:none;"/>
+        </form>
+      </div>
+		<p id='error'></p>
+    </div>
+
+  </center>
+</body>
+</html>

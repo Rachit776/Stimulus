@@ -1,0 +1,63 @@
+<html>
+
+<head>
+	<style media="print"></style>
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+	<script>
+		(function () {// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyDWLnXQwRR-kmvSwlWxgt_TX2F_uEDjHlk",
+				authDomain: "minor-1709364961391.firebaseapp.com",
+				databaseURL: "https://minor-1709364961391-default-rtdb.firebaseio.com",
+				storageBucket: "minor-1709364961391.appspot.com",
+			};
+			firebase.initializeApp(config);
+		}());
+	</script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<!-- Custom script and styling -->
+	<link type="text/css" rel="stylesheet" href="../resources/table.css" />
+	<script defer src="../resources/table.js"></script>
+
+</head>
+
+<body>
+	<div id=output>
+		<img src="../resources/throbber.gif" />&nbsp;&nbsp;Generating table
+	</div>
+	<br><br>
+	<div>Attainment Criteria:<br>
+		If more than <span id='attainstud3'></span>% students have secured more than <span id='attainment'></span>%
+		marks then attainment is : 3<br>
+		If <span id='attainstud2'></span>% to <span id='attainstud0'></span>% students have secured <span
+			id='attainmentx'></span>% marks then attainment is : 2<br>
+		If less than <span id='attainstud1'></span>% students have secured <span id='attainmenty'></span>% marks then
+		attainment is : 1<br>
+	</div><br><br>
+	<div id=coout>
+	</div>
+	<br><br>
+	<div class=analysis>
+		<h4><u>Exam Analysis</u></h4>
+		<b>Total students appeared:</b> <span id="analysis-total"></span><br>
+		<b>Total students passed:</b> <span id="analysis-pass"></span><br>
+		<b>Total students failed:</b> <span id="analysis-fail"></span><br><br>
+
+		<table class="columns">
+			<tr>
+				<td>
+					<div id="donutchart" style="width: 500px; height: 300px;"></div>
+				</td>
+				<td>
+					<div id="donutchart2" style="width: 500px; height: 300px;"></div>
+				</td>
+			</tr>
+		</table>
+
+	</div><br><br><br>
+	FACULTY SIGNATURE: ___________________
+</body>
+
+</html>

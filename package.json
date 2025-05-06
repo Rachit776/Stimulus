@@ -1,0 +1,36 @@
+{
+  "name": "Stimulus",
+  "version": "1.0.0",
+  "description": "A minimal marks entering application",
+  "main": "main.js",
+  "private": true,
+  "xo": {
+    "esnext": true,
+    "space": 4,
+    "max-depth": 6,
+    "globals": [
+      "path",
+      "window",
+      "document",
+      "sessionStorage",
+      "XLS"
+    ]
+  },
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "keywords": [
+    "marks",
+    "teacher",
+    "students"
+  ],
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0",
+    "xo": "^0.12.0"
+  },
+  "dependencies": {
+    "electron": "^0.4.1",
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}

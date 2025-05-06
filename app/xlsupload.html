@@ -1,0 +1,184 @@
+<html>
+
+<head>
+    <title>Stimulus: UPLOAD STUDENT LIST</title>
+    <!-- Material Design -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-red.min.css">
+    <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script>
+        (function () {// Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDWLnXQwRR-kmvSwlWxgt_TX2F_uEDjHlk",
+                authDomain: "minor-1709364961391.firebaseapp.com",
+                databaseURL: "https://minor-1709364961391-default-rtdb.firebaseio.com",
+                storageBucket: "minor-1709364961391.appspot.com",
+            };
+            firebase.initializeApp(config);
+        }());
+    </script>
+
+    <!-- Custom scripts -->
+    <script defer src="../resources/xlsx/dist/xlsx.core.min.js"></script>
+    <script defer src="../resources/xlsupload.js"></script>
+
+    <style type="text/css">
+        .demo-ribbon {
+            width: 100%;
+            height: 65vh;
+            background-color: #3F51B5;
+            flex-shrink: 0;
+        }
+
+        .demo-main1 {
+            margin-top: -65vh;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        #error {
+            color: red;
+        }
+
+        .mdl-menu__item a {
+            color: black;
+            text-decoration: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #eaeaea;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #b0b0b2;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+        <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+            <div class="mdl-layout__header-row">
+                <img src="../resources/favicon.ico" style="margin-left:-50px;"><span class="mdl-layout-title"
+                    style="margin-left:5px;">Stimulus</span>
+                <span class="mdl-layout-title" style="margin-left:39%;">Upload class file</span>
+                <div class="mdl-layout-spacer"></div>
+
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+                    <i class="material-icons">more_vert</i>
+                </button>
+                <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+                    <li class="mdl-menu__item" onclick="window.location.href='details.html'">Details</li>
+                    <li class="mdl-menu__item" onclick="window.location.href='co.html'">CO Mapping</li>
+                    <li class="mdl-menu__item" onclick="firebase.auth().signOut();window.location.href='login.html'">
+                        Logout</li>
+                </ul>
+            </div>
+        </header>
+        <div class="demo-ribbon"></div>
+
+
+        <center>
+
+            <main class="demo-main mdl-layout__content demo-main1">
+
+                <div class="demo-container mdl-grid">
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                    <div
+                        class="demo-content1 mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col">
+
+                        <div style="text-align:center;">
+                            <h5><b><u>INSTRUCTIONS</u></b><br><br>
+                                The columns must be in the following order and named exactly as</h5>
+                            <table class="mdl-data-table mdl-js-data-table mdl-data-table--2dp" border="1"
+                                style="margin-left:400px;">
+                                <tr>
+                                    <th>Roll No.</th>
+                                    <th>Enrollment No.</th>
+                                    <th>Name</th>
+                            </table>
+                        </div>
+                        <br>
+
+                    </div>
+                </div>
+
+                <div class="demo-container mdl-grid">
+                    <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+                    <div
+                        class="demo-content1 mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col">
+
+                        <form action="marks.html">
+                            <h5>
+
+                                <span id=msg>We could not find the student list for the selected class.</span>
+                                Please upload the Excel file with list of students in:<br><br>
+                                <span id="display-sem"></span>-
+                                <span id="display-year"></span> year with
+                                <span id="display-branch"></span>&nbsp;branch and
+                                <span id="display-div"></span>&nbsp;batch during year
+                                <span id="display-cy"></span><br>
+
+                                <br><br><br>Which row contains the header?<br>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                        id="header-row" value='1' / required>
+                                    <label class="mdl-textfield__label" for="header-row">Row no...</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div><br>
+
+                                <br><br><br>Which sheet contains the students list?<br>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                        id="sheet-no" value='1' / required>
+                                    <label class="mdl-textfield__label" for="sheet-no">Sheet no...</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
+
+
+                                <div style="display:block;text-align:center;margin-top:5%;">
+
+                                    <label for="my_file_input">
+                                        <span
+                                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored btn"
+                                            style="cursor:pointer"><b>ADD FILE</b></span>
+                                    </label>
+                                    <br><br>
+                                    <input style="visibility: hidden; position: absolute;" id="my_file_input"
+                                        class="form-control" type="file" name="files"
+                                        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                                </div>
+
+                                <main class="demo-main mdl-layout__content">
+                                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--2dp" border=1
+                                        id='my_file_output'></table>
+                                </main>
+
+                                <br>
+                                <button
+                                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                                    <b>SUBMIT</b>
+                                </button> <img id="throbber" src="../resources/throbber.gif" style="display:none;" />
+                            </h5>
+                            <p id="error"></p>
+                        </form>
+
+                    </div>
+            </main>
+        </center>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>Stimulus: Login</title>
+  <!-- Material Design -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-red.min.css">
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+  (function() {// Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDWLnXQwRR-kmvSwlWxgt_TX2F_uEDjHlk",
+      authDomain: "minor-1709364961391.firebaseapp.com",
+      databaseURL: "https://minor-1709364961391-default-rtdb.firebaseio.com",
+      storageBucket: "minor-1709364961391.appspot.com",
+    };
+    firebase.initializeApp(config);
+  }());
+  </script>
+
+  <!-- Custom script and styling -->
+  <link type="text/css" rel="stylesheet" href="../resources/login.css" />
+  <script defer src="../resources/login.js"></script>
+
+</head>
+
+<body>
+
+  <center>
+    <div class="base">
+
+      <!-- Login form -->
+      <div id="info1">Login</div>
+      <div id="form1" class="form">
+        <div class="form-img">
+          <img src="../resources/profile-img.png" width="99" height="99" />
+        </div>
+
+        <form action="details.html" method="post">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="email" id="email"
+            pattern="[^ ]*@gmail.com$" title="Enter a valid gmail address">
+            <label class="mdl-textfield__label" for="email">Email id...</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="password" id="password">
+            <label class="mdl-textfield__label" for="password">Password...</label>
+          </div>
+
+          <div class="button">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"><b>LOGIN</b></button>
+            <img id="throbber" src="../resources/throbber.gif" style="display:none;"/>
+          </div>
+
+          <div id="info3">
+            <a href="#" id="fp">Forgot or Reset Passsword?</a>
+            <br>
+            <a href="signup.html" id="fp">New User?</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Forgot password form -->
+      <div id="form2" class="form" style="display:none;">
+        <div class="form-img">
+          <img src="../resources/profile-img.png" width="99" height="99" />
+        </div>
+
+        <form action="login.html">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="email" id="email2">
+            <label class="mdl-textfield__label" for="email">Email...</label>
+          </div>
+
+          <div class="button" id="resetButton">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"><b>RESET PASSWORD</b></button>
+            <img id="throbber" src="../resources/throbber.gif" style="display:none;"/>
+          </div>
+          A mail with password reset link will be sent to your account
+        </form>
+      </div>
+      <!-- End form 2: Forgot password -->
+      <p id="error"></p>
+
+    </div>
+  </center>
+
+</body>
+</html>

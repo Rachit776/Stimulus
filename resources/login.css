@@ -1,0 +1,79 @@
+.base {
+	position:absolute;
+	width:100%;
+	top:0px;
+	left:0px;
+	color:gray;
+	height: 50%;
+	background-color: #3F51B5;
+}
+#info1 {
+	width:500px;
+	margin-top:105px;
+	font-family: 'Roboto', sans-serif;
+	font-size:38px;
+	color:white;
+}
+.form {
+	margin-top:45px;
+	width:355px;
+	height:320px;
+	padding-top:35px;
+	background:#f7f7f7;
+	box-shadow: 0px 1px 1px 1px #c6c1c1;
+}
+#form-details {
+	height:675px;
+}
+#form-sup {
+	height: 395px;
+}
+.form-img {
+	width:99px;
+	height:78px;
+	margin-bottom: 15px;
+}
+#resetButton {
+	margin-bottom: 15px;
+}
+#info3 {
+	float:right;
+	margin-top:10px;
+	font-size:13px;
+	font-family: 'Roboto', sans-serif;
+	color:#498af2;
+	padding-right:90px;
+	font-weight:bold;
+}
+#info4 {
+	float:right;
+	font-size:13px;
+	font-family: 'Roboto', sans-serif;
+	color:#498af2;
+	padding-right:42px;
+	font-weight:bold;
+}
+#info3 a {
+	color:#498af2;
+	text-decoration:none;
+}
+#info4 a {
+	color:#498af2;
+	text-decoration:none;
+}
+#error {
+	color: red;
+}
+.yesfe {
+	display: none;
+}
+::-webkit-scrollbar {
+	width: 12px;
+}
+::-webkit-scrollbar-track {
+	background-color: #eaeaea;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #b0b0b2;
+	border-radius: 8px;
+}

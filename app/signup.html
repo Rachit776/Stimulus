@@ -1,0 +1,85 @@
+<html>
+<head>
+  <title>Stimulus: Signup</title>
+
+  <!-- Material Design -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-red.min.css">
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+  (function() {// Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDWLnXQwRR-kmvSwlWxgt_TX2F_uEDjHlk",
+      authDomain: "minor-1709364961391.firebaseapp.com",
+      databaseURL: "https://minor-1709364961391-default-rtdb.firebaseio.com",
+      storageBucket: "minor-1709364961391.appspot.com",
+    };
+    firebase.initializeApp(config);
+  }());
+  </script>
+
+  <!-- Custom script and styling -->
+  <link type="text/css" rel="stylesheet" href="../resources/login.css" />
+  <script defer src="../resources/signup.js"></script>
+
+</head>
+
+<body>
+
+  <center>
+    <div class="base">
+
+      <!-- Login form -->
+      <div id="info1">Signup</div>
+      <div id="form-sup" class="form">
+        <div class="form-img">
+          <img src="../resources/profile-img.png" width="99" height="99" />
+        </div>
+
+        <form name="form" action="login.html" method="post">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="email" id="email" required
+            pattern="[^ ]*@gmail.com$" title="Enter a valid gmail address">
+            <label class="mdl-textfield__label" for="email">Email...</label>
+            <span class="mdl-tooltip mdl-tooltip--validation" for="email">
+              <span>Enter the valid gmail address.</span>
+            </span>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="name" required>
+            <label class="mdl-textfield__label" for="name">Name...</label>
+          </div>
+
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="password" id="password" name="password"
+            required pattern="[A-Za-z0-9]{6,20}" title="Enter atleast 6 characters"/>
+            <label class="mdl-textfield__label" for="password">Password</label>
+            <span class="mdl-tooltip mdl-tooltip--validation" for="password">
+              <span>Atleast 6 characters.</span>
+            </span>
+          </div>
+
+          <div class="button">
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">SIGNUP</button>
+            <img id="throbber" src="../resources/throbber.gif" style="display:none;"/>
+          </div>
+
+          <div id="info4">
+            <a href="login.html" id="lg">Sign in</a>
+          </div>
+          <br>
+          A verification e-mail will be sent to you
+        </form>
+
+      </div>
+      <p id="error"></p>
+    </div>
+  </center>
+
+</body>
+</html>
