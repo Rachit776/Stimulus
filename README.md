@@ -4,8 +4,24 @@
 
 <p id="description">Stimulus is a software designed to automate the mapping of Internal Assessment Test marks to course outcomes and perform various marks calculations. It utilizes a database to store all necessary details allowing users to resume their work easily. The software includes built-in sanity checks and validations to minimize errors and it automatically generates attainment reports for each course outcome based on the specified criteria.</p>
 
-  
-  
+<h2>Installation Guide</h2>
+
+## Installation
+
+Extract/Clone the project
+Go into the project directory:
+```bash
+  cd Stimulus
+```
+Install all the libraries
+```bash
+  npm install
+```
+Run the project
+```bash
+  npm start
+```
+
 <h2>💻 Built with</h2>
 
 Technologies used in the project:
@@ -17,7 +33,7 @@ Technologies used in the project:
 
 <h2>Implementation Summary</h2>
 
-*   Teachers register using their official SFIT email (@sfitengg.org), with credentials stored in Firebase Auth.
+*   Teachers register using their official gmail email (@gmail.com), with credentials stored in Firebase Auth.
 *   After logging in, they input details like class and year.
 *   The system checks if the student list for that class/year exists; if not, teachers upload an Excel sheet with student names, PID numbers, and roll numbers.
 *   Teachers enter the Course Outcome (CO) mapping for each question unless it’s already saved in the Firebase Realtime Database.
@@ -48,18 +64,16 @@ Technologies used in the project:
 
 ### Automatic computations and color Coding
 
-<h3>Stimulus automates key calculations, including:</h3>
+<h3>-Stimulus automates key calculations, including:</h3>
+    *   Top 5 scorers<br>
+    *   Total marks obtained and attempted per CO for each student<br>
+    *   Total marks scored by each student<br>
+    *   Attainment value for each CO per student<br>
+    *   Overall attainment for each CO<br>
 
-*   Top 5 scorers<br>
-*   Total marks obtained and attempted per CO for each student<br>
-*   Total marks scored by each student<br>
-*   Attainment value for each CO per student<br>
-*   Overall attainment for each CO<br>
-
-<h3>It also automatically color-codes:</h3>
-
-*   Attainment of each CO for every student<br>
-*   Total attainment of each CO<br>
+<h3>-It also automatically color-codes:</h3>
+    *   Attainment of each CO for every student<br>
+    *   Total attainment of each CO<br>
 
 ### All data in database
 *   All necessary data is stored using Firebase Realtime Database (FRD), which saves data in JSON format.<br>
