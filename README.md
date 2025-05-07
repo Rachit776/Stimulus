@@ -28,38 +28,38 @@ Technologies used in the project:
 ## Key features
 
 ### Web based Software
--As a web-based software, it benefits from the ease and flexibility typical of web development.<br>
--Running it outside a standard browser (not as a regular website) gives better control over user flow, preventing actions like page jumping or using back/forward buttons.<br>
--It also enables access to lower-level system functions, such as directly saving PDFs to the desktop — features not easily achievable in a browser environment.<br>
+*   As a web-based software, it benefits from the ease and flexibility typical of web development.<br>
+*   Running it outside a standard browser (not as a regular website) gives better control over user flow, preventing actions like page jumping or using back/forward buttons.<br>
+*   It also enables access to lower-level system functions, such as directly saving PDFs to the desktop — features not easily achievable in a browser environment.<br>
 
 ### Restricted access
--Login, registration, and related functions are managed using Firebase Auth, avoiding the need to build a custom authentication system.<br>
--This setup leverages Google’s advanced, up-to-date security features.<br>
--Only users with verified @sfitengg.org email addresses can access the software.<br>
--Even if someone gains access with an unauthorized email, Firebase’s database read/write rules prevent them from viewing or altering any data.<br>
+*   Login, registration, and related functions are managed using Firebase Auth, avoiding the need to build a custom authentication system.<br>
+*   This setup leverages Google’s advanced, up-to-date security features.<br>
+*   Only users with verified @sfitengg.org email addresses can access the software.<br>
+*   Even if someone gains access with an unauthorized email, Firebase’s database read/write rules prevent them from viewing or altering any data.<br>
 
 ### Read student list from excel
--The college maintains Excel files containing student data (by class and year).<br>
--Quibble can directly parse these files to extract student information and store it in the database, eliminating the need for teachers to repeatedly enter the same details.<br>
+*   The college maintains Excel files containing student data (by class and year).<br>
+*   Quibble can directly parse these files to extract student information and store it in the database, eliminating the need for teachers to repeatedly enter the same details.<br>
 
 ### Read previous marks from excel
--Before Quibble, all work was done manually, with data stored in Excel files.<br>
--Quibble can read these old Excel files and automatically import the necessary data into the database, streamlining and digitizing the process.<br>
+*   Before Quibble, all work was done manually, with data stored in Excel files.<br>
+*   Quibble can read these old Excel files and automatically import the necessary data into the database, streamlining and digitizing the process.<br>
 
 ### Automatic computations and color Coding
 
-### Quibble automates key calculations, including:
--Top 5 scorers<br>
--Total marks obtained and attempted per CO for each student<br>
--Total marks scored by each student<br>
--Attainment value for each CO per student<br>
--Overall attainment for each CO<br>
+<h3>Quibble automates key calculations, including:</h3>
+*   Top 5 scorers<br>
+*   Total marks obtained and attempted per CO for each student<br>
+*   Total marks scored by each student<br>
+*   Attainment value for each CO per student<br>
+*   Overall attainment for each CO<br>
 
-### It also automatically color-codes:<br>
--Attainment of each CO for every student<br>
--Total attainment of each CO<br>
+<h3>It also automatically color-codes:</h3>
+*   Attainment of each CO for every student<br>
+*   Total attainment of each CO<br>
 
 ### All data in database
--All necessary data is stored using Firebase Realtime Database (FRD), which saves data in JSON format.<br>
--This storage enables features like open-and-resume and avoids redundant data entry.<br>
--Additionally, the stored data can be leveraged for advanced analytics and visualizations in the future.<br>
+*   All necessary data is stored using Firebase Realtime Database (FRD), which saves data in JSON format.<br>
+*   This storage enables features like open-and-resume and avoids redundant data entry.<br>
+*   Additionally, the stored data can be leveraged for advanced analytics and visualizations in the future.<br>
