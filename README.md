@@ -4,8 +4,6 @@
 
 <p id="description">Stimulus is a software designed to automate the mapping of Internal Assessment Test marks to course outcomes and perform various marks calculations. It utilizes a database to store all necessary details allowing users to resume their work easily. The software includes built-in sanity checks and validations to minimize errors and it automatically generates attainment reports for each course outcome based on the specified criteria.</p>
 
-<h2>Installation Guide</h2>
-
 ## Installation
 
 Extract/Clone the project
@@ -51,7 +49,7 @@ Technologies used in the project:
 ### Restricted access
 *   Login, registration, and related functions are managed using Firebase Auth, avoiding the need to build a custom authentication system.<br>
 *   This setup leverages Google’s advanced, up-to-date security features.<br>
-*   Only users with verified @sfitengg.org email addresses can access the software.<br>
+*   Only users with verified @gmail.com email addresses can access the software.<br>
 *   Even if someone gains access with an unauthorized email, Firebase’s database read/write rules prevent them from viewing or altering any data.<br>
 
 ### Read student list from excel
