@@ -49,6 +49,7 @@ Technologies used in the project:
 ### Automatic computations and color Coding
 
 <h3>Quibble automates key calculations, including:</h3>
+
 *   Top 5 scorers<br>
 *   Total marks obtained and attempted per CO for each student<br>
 *   Total marks scored by each student<br>
@@ -56,6 +57,7 @@ Technologies used in the project:
 *   Overall attainment for each CO<br>
 
 <h3>It also automatically color-codes:</h3>
+
 *   Attainment of each CO for every student<br>
 *   Total attainment of each CO<br>
 
