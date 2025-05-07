@@ -40,15 +40,15 @@ Technologies used in the project:
 
 ### Read student list from excel
 *   The college maintains Excel files containing student data (by class and year).<br>
-*   Quibble can directly parse these files to extract student information and store it in the database, eliminating the need for teachers to repeatedly enter the same details.<br>
+*   Stimulus can directly parse these files to extract student information and store it in the database, eliminating the need for teachers to repeatedly enter the same details.<br>
 
 ### Read previous marks from excel
-*   Before Quibble, all work was done manually, with data stored in Excel files.<br>
-*   Quibble can read these old Excel files and automatically import the necessary data into the database, streamlining and digitizing the process.<br>
+*   Before Stimulus, all work was done manually, with data stored in Excel files.<br>
+*   Stimulus can read these old Excel files and automatically import the necessary data into the database, streamlining and digitizing the process.<br>
 
 ### Automatic computations and color Coding
 
-<h3>Quibble automates key calculations, including:</h3>
+<h3>Stimulus automates key calculations, including:</h3>
 
 *   Top 5 scorers<br>
 *   Total marks obtained and attempted per CO for each student<br>
