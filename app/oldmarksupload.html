@@ -17,29 +17,190 @@
     <script defer src="../resources/oldmarksupload.js"></script>
 
     <style type="text/css">
-        .demo-ribbon {
-            width: 100%;
-            height: 65vh;
-            background-color: #3F51B5;
-            flex-shrink: 0;
-        }
+/* General styles for demo-content1 */
+.mdl-color--white{
+    background-color: #3F51B5;
+}
+.demo-content1 {
+    background-color: #3F51B5; /* New background color for content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* mdl-shadow--4dp equivalent */
+    color: #616161; /* Grey text (mdl-color-text--grey-800) */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .demo-main1 {
-            margin-top: -55vh;
-        }
 
-        form {
-            margin: 20px;
-        }
 
-        #error {
-            color: red;
-        }
+/* Styling for the content area (mdl-color--white) */
+.content {
+    background-color: #3F51B5; /* Matching the new background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Same shadow as demo-content1 */
+}
 
-        .mdl-menu__item a {
-            color: black;
-            text-decoration: none;
-        }
+/* Grey text for the content */
+.mdl-color-text--grey-800 {
+    color: #616161; /* Dark grey text color */
+}
+
+/* Ensuring the content fills the full width */
+.mdl-cell--12-col {
+    width: 100%; /* Makes sure it takes up the full width */
+    box-sizing: border-box;
+}
+
+/* Styling for the mdl-cell (Material Design Layout Grid) */
+.mdl-cell {
+    padding: 0 10px; /* Adjusting padding */
+    box-sizing: border-box;
+}
+
+/* Optional: Adding transition to the content to make background color change smooth */
+.mdl-cell--12-col {
+    transition: background-color 0.3s ease;
+}
+
+
+
+.mdl-layout-title{
+    color:white;
+}
+body, .mdl-layout__content {
+    background-color: #f4f4f4; /* Lighter background to blend seamlessly with header */
+}
+
+.demo-main {
+    background-color: #ffffff; /* Change to your desired background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+
+/* Style for the mdl-layout__content section */
+.mdl-layout__content {
+    background-color: #ffffff; /* Change to your desired background color */
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Optional: Adding a transition to content */
+
+/* To blend header with the body */
+.mdl-layout__content {
+    background-color: #3F51B5; /* Optional lighter background for seamless blend */
+}
+
+.mdl-layout__header-row {
+    background-color: #3F51B5;
+    box-shadow: none; /* Remove shadow for a cleaner, blended look */
+    border-bottom: none; /* Removes the border between header and body */
+    z-index: 9999; /* Ensures header stays on top of other elements */
+}   /* Ribbon section */
+.demo-ribbon {
+    margin-top: -8px; 
+    width: 100%;
+    height: 505px;
+    background-color: #3F51B5;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Main content positioning */
+.demo-main1 {
+    margin-top: -55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form styling */
+form {
+    width: 100%;
+    max-width: 480px;  /* Limiting the width of the form */
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for form */
+form:hover {
+    transform: translateY(-5px);
+}
+
+/* Error message styling */
+#error {
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Menu item links */
+.mdl-menu__item a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+/* Hover effect for menu links */
+.mdl-menu__item a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the input fields */
+input {
+    width: 100%;
+    padding: 12px 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+/* Focus state for input fields */
+input:focus {
+    outline: none;
+    border-color: #3F51B5;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
     </style>
 </head>
 
@@ -73,7 +234,7 @@
                 <div class="demo-container mdl-grid">
                     <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
                     <div
-                        class="demo-content1 mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col">
+                        class="">
 
                         <form action="marks.html">
                             <h5>
