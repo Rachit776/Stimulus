@@ -12,18 +12,8 @@
   <link type="text/css" rel="stylesheet" href="../resources/getmdl-select.min.css" />
 
   <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-  <script>
-  (function() {// Initialize Firebase
-    var config = {
-            apiKey: "AIzaSyDWLnXQwRR-kmvSwlWxgt_TX2F_uEDjHlk",
-            authDomain: "minor-1709364961391.firebaseapp.com",
-            databaseURL: "https://minor-1709364961391-default-rtdb.firebaseio.com",
-            storageBucket: "minor-1709364961391.appspot.com",
-        };
-    firebase.initializeApp(config);
-  }());
-  </script>
+  <script src="https://www.gstatic.com/firebasejs/3.0.0/firebase.js"></script>
+  <script src="../resources/firebase-config.js"></script>
 
   <!-- Custom script and styling -->
   <link type="text/css" rel="stylesheet" href="../resources/login.css" />
@@ -68,7 +58,7 @@
           
 
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" id="teacher"  value="Shailesh Srivastava" required>
+            <input class="mdl-textfield__input" type="text" id="teacher"  value="Name" required>
             <label class="mdl-textfield__label" for="teacher">Teacher Name...</label>
           </div><br>
 
