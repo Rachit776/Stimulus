@@ -77,3 +77,28 @@ Technologies used in the project:
 *   All necessary data is stored using Firebase Realtime Database (FRD), which saves data in JSON format.<br>
 *   This storage enables features like open-and-resume and avoids redundant data entry.<br>
 *   Additionally, the stored data can be leveraged for advanced analytics and visualizations in the future.<br>
+
+
+<hr>
+### ScreenShots
+
+<p align="center">
+  <img src="Screenshots/sc1.png" alt="image"/>
+</p>
+
+<p align="center">
+  <img src="Screenshots/sc2.png" alt="image"/>
+</p>
+
+<p align="center">
+  <img src="Screenshots/sc3.png" alt="image"/>
+</p>
+
+<p align="center">
+  <img src="Screenshots/sc4.png" alt="image"/>
+</p>
+
+<p align="center">
+  <img src="Screenshots/sc5.png" alt="image"/>
+</p>
+

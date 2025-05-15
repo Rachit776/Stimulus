@@ -84,15 +84,9 @@ form .mdl-textfield {
     width: 300px;
     background-color: #3F51B5;
     color: white;
-    border-right: none;
-    box-shadow: none;
 }
 
-.mdl-layout__drawer a:hover {
-    background-color: #3F51B5; /* Lighter indigo background on hover */
-    color: #000a46; /* Keep the text color white */
-    cursor: pointer; /* Pointer cursor to indicate it’s clickable */
-}
+
 
 .mdl-navigation {
     background-color: #3F51B5 !important;
@@ -105,7 +99,6 @@ form .mdl-textfield {
 }
 
 .mdl-layout__container,
-.mdl-layout__drawer, 
 .mdl-layout__content{
     overflow-y: hidden;
 }
