@@ -81,29 +81,29 @@ Technologies used in the project:
 
 <hr>
 
-### ScreenShots
+<h2>ScreenShots</h2>
 
-<h2>Login</h2>
+### login
 <p align="center">
   <img src="Screenshots/sc1.png" alt="image"/>
 </p>
 
-<h2>Enter Details</h2>
+### Enter Details
 <p align="center">
   <img src="Screenshots/sc2.png" alt="image"/>
 </p>
 
-<h2>CO Marking</h2>
+### CO Marking
 <p align="center">
   <img src="Screenshots/sc4.png" alt="image"/>
 </p>
 
-<h2>Entering Student Marks</h2>
+### Entering Student Marks
 <p align="center">
   <img src="Screenshots/sc3.png" alt="image"/>
 </p>
 
-<h2>Generated Table</h2>
+### Generated Table
 <p align="center">
   <img src="Screenshots/sc5.png" alt="image"/>
 </p>
