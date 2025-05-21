@@ -2,6 +2,7 @@
   "name": "Stimulus",
   "version": "1.0.0",
   "description": "A minimal marks entering application",
+  "author": "",
   "main": "main.js",
   "private": true,
   "xo": {
@@ -17,7 +18,23 @@
     ]
   },
   "scripts": {
-    "start": "electron main.js"
+    "start": "electron main.js",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.stimulus.app",
+    "productName": "Stimulus",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "favicon.ico"
+
+    }
   },
   "keywords": [
     "marks",
@@ -26,11 +43,11 @@
   ],
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron-prebuilt": "^1.2.0",
+    "electron": "^36.2.1",
+    "electron-builder": "^26.0.12",
     "xo": "^0.12.0"
   },
   "dependencies": {
-    "electron": "^0.4.1",
     "electron-squirrel-startup": "^1.0.0"
   }
 }
